@@ -9,7 +9,7 @@ export const Header = () => {
      <div className="container max-auto ">
     {/* logo */}
       <Link href='/'>
-       <h1 className='text-4xl font-semibold'>Carlos 
+       <h1 className='text-4xl font-semibold'>Carlos Alfredo Perez Monterrey
        <span className='text-accent'>.</span></h1>
        </Link></div>
          {/* desktop nav & hire me button */}
