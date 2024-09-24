@@ -8,6 +8,16 @@
   }
   
   body {
+    .h1{
+      @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
+    }
+    .h2{
+      @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold
+    }
+    .h1{
+      @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold
+    }
+    
     font-family: var(primary); /* Aplica la variable aquí */
     @apply bg-primary text-white; /* Asegúrate de que bg-primary y text-white sean clases válidas */
   }

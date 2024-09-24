@@ -22,11 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <Header>
-          <PageTransition>
-            <div key={pathname}>{children}</div> {/* Renderiza 'children' aquí dentro de PageTransition */}
-          </PageTransition>
-        </Header>
+       <main className="flex flex-col">
+       <Header>
+         
+         </Header>
+{/*          <PageTransition>
+ */}             <div key={pathname}>{children}</div> {/* Renderiza 'children' aquí dentro de PageTransition */}
+{/*            </PageTransition>
+ */}       </main>
       </body>
     </html>
   );

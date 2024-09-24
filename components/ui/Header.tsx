@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
       <div className="container max-auto">
         {/* logo */}
         <Link href='/'>
-          <h1 className='text-4xl font-semibold'>Carlos Alfredo Perez Monterrey
+          <h1 className='text-4xl font-semibold'>Carlos
             <span className='text-accent'>.</span>
           </h1>
         </Link>
@@ -33,4 +33,4 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
       {children} {/* Renderiza children aquí si es necesario */}
     </header>
   );
-}
+}  
