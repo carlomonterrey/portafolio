@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/ui/Header";
-import { usePathname } from "next/navigation";
 import { PageTransition } from "@/components/ui/PageTransition";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { StairTransition } from "./StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -23,8 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header>
+          <StairTransition />
           <PageTransition>
-            <div key={pathname}>{children}</div> {/* Renderiza 'children' aquí dentro de PageTransition */}
+            <div key={pathname}>{children}</div> {/* Aquí se pasa 'children' correctamente */}
           </PageTransition>
         </Header>
       </body>
