@@ -1,5 +1,5 @@
+import { Social } from "@/components/Social";
 import { Button } from "@/components/ui/button";
-import { Social } from "../components/Social";
 
 import { IoMdDownload } from "react-icons/io"
 
@@ -11,9 +11,14 @@ import { IoMdDownload } from "react-icons/io"
           <span className="text-xl">Softwere Developer</span>
           <h1 className="h1 mb-6">Hello I am <br /><span className="text-accent">Carlos Monterrey</span>
           </h1>
-          <p className="max-w-[500px] mb-9 text-white/80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae similique dicta nobis quasi temporibus, cumque veniam. Amet, in facilis quod voluptates ex, exercitationem repudiandae, eaque recusandae nihil architecto quisquam?</p>
+          <p className="max-w-[600px] mb-9 text-white/80">
+          I am a dedicated web developer with a passion for crafting innovative tech solutions. I
+focus on creating high-quality products that not only meet rigorous standards but also
+push me to continuously improve my skills and knowledge. I’m driven by a desire to
+constantly learn and optimize both my work and the user experiences I help create.
+          </p>
         </div>
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center gap-5">
           <Button
           variant="outline"
           size="lg"
@@ -24,7 +29,7 @@ import { IoMdDownload } from "react-icons/io"
           </Button>
           <div className="mb-8 xl:mb-0">
 <Social 
-containerStyles="flex gap-6 items-center" 
+containerStyles="flex  gap-6 items-center h-16" 
 iconStyles="w-9 h-9 border border-accent rounded-full flex
  justify-center items-center text-accent text-base hover:bg-accent
   hover:text-primary hover:transition-all duration-500"></Social>   

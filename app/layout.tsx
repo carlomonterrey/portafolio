@@ -6,11 +6,6 @@ import { Header } from "@/components/ui/Header";
 import { usePathname } from "next/navigation";
 import { PageTransition } from "@/components/ui/PageTransition";
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "400", "500", "600", "700", "800"],
-  variable: '--font-jetbrainsMono',
-});
 
 export default function RootLayout({
   children,
@@ -21,7 +16,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={jetbrainsMono.variable}>
+      <body >
        <main className="flex flex-col">
        <Header>
          
