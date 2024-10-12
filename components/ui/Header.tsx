@@ -10,16 +10,15 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ children }) => {
   return (
-    <header className='py-8 xl:py-12 text-white flex justify-between items-center'>
-      <div className="container max-auto">
+    <header className='py-8 xl:py-12 text-white'>
+      <div className="container max-auto flex justify-between">
         {/* logo */}
         <Link href='/'>
           <h1 className='text-4xl font-semibold'>Carlos
             <span className='text-accent'>.</span>
           </h1>
         </Link>
-      </div>
-      {/* desktop nav & hire me button */}
+         {/* desktop nav & hire me button */}
       <div className="xl:flex hidden items-center gap-8">
         <Nav />
         <Link href='/contact'>
@@ -31,6 +30,8 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
         <MobileNav />
       </div>
       {children} {/* Renderiza children aquí si es necesario */}
+      </div>
+     
     </header>
   );
 }  
