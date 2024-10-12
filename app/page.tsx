@@ -1,3 +1,4 @@
+import { Photo } from "@/components/Photo";
 import { Social } from "@/components/Social";
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +19,7 @@ push me to continuously improve my skills and knowledge. I’m driven by a desir
 constantly learn and optimize both my work and the user experiences I help create.
           </p>
         </div>
-        <div className="flex justify-center gap-5">
+        <div className="flex flex-col xl:flex-row justify-center gap-5">
           <Button
           variant="outline"
           size="lg"
@@ -29,14 +30,14 @@ constantly learn and optimize both my work and the user experiences I help creat
           </Button>
           <div className="mb-8 xl:mb-0">
 <Social 
-containerStyles="flex  gap-6 items-center h-16" 
+containerStyles="flex  gap-6 items-center justify-center h-16" 
 iconStyles="w-9 h-9 border border-accent rounded-full flex
  justify-center items-center text-accent text-base hover:bg-accent
   hover:text-primary hover:transition-all duration-500"></Social>   
        </div>
         </div>
         
-        <div>foto</div>
+        <div><Photo></Photo></div>
       </div>
     </section>
    );
