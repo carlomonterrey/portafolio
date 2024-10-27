@@ -21,4 +21,10 @@
     font-family: var(primary); /* Aplica la variable aquí */
     @apply bg-primary text-white; /* Asegúrate de que bg-primary y text-white sean clases válidas */
   }
+  .text-outline{
+    -webkit-text-stroke: 1px #ffffff  ;
+  }
+  .text-outline-hover{
+    -webkit-text-stroke: 1px #00ff99  ;
+  }
 }

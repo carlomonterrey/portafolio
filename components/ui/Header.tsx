@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
       <div className="container max-auto flex justify-between">
         {/* logo */}
         <Link href='/'>
-          <h1 className='text-4xl font-semibold'>Carlos
+          <h1 className='text-4xl font-semibold'>Carlos  Monterrey
             <span className='text-accent'>.</span>
           </h1>
         </Link>

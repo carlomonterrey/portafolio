@@ -11,10 +11,10 @@ import { IoMdDownload } from "react-icons/io"
       <div className="flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
         <div className="text-center xl:text-left order-2 xl:order-none">
           <span className="text-xl">Softwere Developer</span>
-          <h1 className="h1 mb-6">Hello I am
-           <br /><span className="text-accent">Carlos Monterrey</span>
+          <h1 className="h1 mb-6 "><span className="text-4xl">Hello I am</span>
+           <br /><span className="text-accent text-4xl">Carlos Monterrey</span>
           </h1>
-          <p className="max-w-[600px] mb-9 text-white/80">
+          <p className="max-w-[600px] mb-9 text-white/80 text-xl">
           I am a dedicated web developer with a passion for crafting innovative tech solutions. I
 focus on creating high-quality products that not only meet rigorous standards but also
 push me to continuously improve my skills and knowledge. I’m driven by a desire to
