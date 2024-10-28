@@ -12,15 +12,18 @@ export const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   
   return (
     <AnimatePresence>
+      <div  key={pathname}>
       <motion.div
-        key={pathname}
+       
         className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0, transition: { delay: 1, duration: 0.4, ease: "easeInOut" } }}
-        exit={{ opacity: 1, transition: { duration: 0.4, ease: "easeInOut" } }}
-      >
-        {children}
-      </motion.div>
+      
+      />
+      {children}
+
+      </div>
+     
     </AnimatePresence>
   );
 };

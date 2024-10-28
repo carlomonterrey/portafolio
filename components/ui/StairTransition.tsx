@@ -12,7 +12,7 @@ export const StairTransition = () => {
   <div key={pathname}>
     <div className='h-screen w-screen fixed
     top-0 left-0 right-0 pointer-event-none z-40 flex'>
-<Stair></Stair>
+<Stair/>
     </div>
   </div>
 </AnimatePresence>

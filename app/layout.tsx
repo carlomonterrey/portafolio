@@ -17,14 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-       <main className="flex flex-col">
-       <Header>
-         
-         </Header>
-{/*          <PageTransition>
- */}             <div key={pathname}>{children}</div> {/* Renderiza 'children' aquí dentro de PageTransition */}
-{/*            </PageTransition>
- */}       </main>
+       <Header/>
+         <PageTransition>
+         {children}
+         </PageTransition>
+    
       </body>
     </html>
   );

@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <Header>
-          <StairTransition />
+        <Header/>
+        <StairTransition/> 
+
           <PageTransition>
             <div key={pathname}>{children}</div> {/* Aquí se pasa 'children' correctamente */}
           </PageTransition>
-        </Header>
       </body>
     </html>
   );
