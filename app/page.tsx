@@ -1,5 +1,7 @@
+"use client"
 import { Photo } from "@/components/Photo";
 import { Social } from "@/components/Social";
+import { Stats } from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 
 import { IoMdDownload } from "react-icons/io"
@@ -39,7 +41,8 @@ iconStyles="w-9 h-9 border border-accent rounded-full flex
         </div>
         </div>
       
-        <div className="order-1 xl:order-none  mb-8 xl:mb-0"><Photo></Photo></div>
+        <div className="order-1 xl:order-none  mb-8 xl:mb-0">
+          <Photo></Photo></div>
 
         </div>
 
@@ -47,7 +50,7 @@ iconStyles="w-9 h-9 border border-accent rounded-full flex
       
        
 
-
-    </section>
+      <Stats></Stats> 
+         </section>
    );
 }
