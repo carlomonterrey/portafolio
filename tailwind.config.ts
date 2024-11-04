@@ -20,7 +20,6 @@ const config: Config = {
 							},
 		
 			fontFamily:{
-				primary:"var(--font-jetbrainsMono)"
 			},
 			
   	extend: {
