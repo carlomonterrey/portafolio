@@ -1,5 +1,5 @@
 
-"use-client" 
+"use client" 
 import {BsArrowDownRight}from "react-icons/bs"
 import React from 'react';
 import { motion } from "framer-motion";
