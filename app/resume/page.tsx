@@ -1,4 +1,4 @@
-"use-client"
+"use client"
    // services.js o services.jsx
    import React from 'react';
 import { FaHtml5,FaCss3,FaJs,FaAngular,FaReact,FaNode } from 'react-icons/fa';
@@ -80,7 +80,7 @@ const skills={
        }}
        animate={{
         opacity:1,
-        transition:{}
+        transition:{delay:2.4,duration:0.4,ease:"easeIn"}
        }}>
          <h1>Resume</h1>
          {/* Contenido de los servicios */}
