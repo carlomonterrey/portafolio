@@ -81,7 +81,21 @@ const skills={
        animate={{
         opacity:1,
         transition:{delay:2.4,duration:0.4,ease:"easeIn"}
-       }}>
+       }}
+       className='min-h-[80vh] flex item-center justify-center py-12 xl:py-0'>
+        <div className='container mx-auto'>
+          <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
+            <TabsList>
+            <TabsTrigger value={''}>Experience</TabsTrigger>
+            <TabsTrigger value={''}>Education</TabsTrigger>
+
+            <TabsTrigger value={''}>Skills</TabsTrigger>
+
+            <TabsTrigger value={''}>About me</TabsTrigger>
+
+            </TabsList>
+          </Tabs>
+        </div>
          <h1>Resume</h1>
          {/* Contenido de los servicios */}
        </motion.div>
