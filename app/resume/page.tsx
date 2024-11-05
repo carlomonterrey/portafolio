@@ -84,20 +84,24 @@ const skills={
        }}
        className='min-h-[80vh] flex item-center justify-center py-12 xl:py-0'>
         <div className='container mx-auto'>
-          <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
-            <TabsList>
-            <TabsTrigger value={''}>Experience</TabsTrigger>
-            <TabsTrigger value={''}>Education</TabsTrigger>
+          <Tabs defaultValue='experience' 
+          className='flex flex-col xl:flex-row gap-[60px]'>
+            <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-1'>
+            <TabsTrigger value={'experience'}>Experience</TabsTrigger>
+            <TabsTrigger value={'education'}>Education</TabsTrigger>
 
-            <TabsTrigger value={''}>Skills</TabsTrigger>
+            <TabsTrigger value={'skills'}>Skills</TabsTrigger>
 
-            <TabsTrigger value={''}>About me</TabsTrigger>
+            <TabsTrigger value={'about'}>About me</TabsTrigger>
 
             </TabsList>
+            <div className='min-h-[70] w-full'>
+              <TabsContent value='experience' className='w-full'>
+experience
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
-         <h1>Resume</h1>
-         {/* Contenido de los servicios */}
        </motion.div>
      );
    };

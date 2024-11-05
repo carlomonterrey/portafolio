@@ -25,7 +25,7 @@ animate={{opacity:1,
         priority
          quality={100}
         fill className='object-container'
-         src={'/assets/perfil.png'}/>
+         src={'/assets/photo2.jpg'}/>
 
   </motion.div>
 <motion.svg 
