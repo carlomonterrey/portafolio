@@ -15,8 +15,11 @@ const services=[
      return (
      <section className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'>
       <div className="container max-auto"> 
-        <div
-       
+        <motion.div
+        initial={{opacity:0}}
+        animate={{opacity:1,transition:{
+          delay:2.4,duration:0.4,ease:"easeIn"
+        }}}
         className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'>
         {services.map((service:any,index)=>{
           return (
@@ -42,7 +45,7 @@ className='w-full flex justify-between items-center '>
        
      </div>)
         })}
-        </div>
+        </motion.div>
       </div>
      </section>
      );
