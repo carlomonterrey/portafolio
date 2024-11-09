@@ -1,12 +1,15 @@
 "use client"
 import { motion } from 'framer-motion';
-import React from 'react'
+import React, { useState } from 'react'
 import {Input} from "@/components/ui/input"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { FaGlobe, FaMapMarkedAlt, FaPhone } from 'react-icons/fa';
 import { SiSkype } from 'react-icons/si';
+import emailjs from 'emailjs-com';
+import { toast, Toaster } from "sonner"
+
 const info:any=[{
  icon: <FaPhone />,
  title:'Phone',
@@ -25,6 +28,46 @@ const info:any=[{
  
 }]
  const Contact = () => {
+  const [formData, setFormData] = useState({
+   firstname: '',
+   lastname: '',
+   email: '',
+   phone: '',
+   service: '',
+   message: '',
+ });
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+   const { name, value } = e.target;
+   setFormData({ ...formData, [name]: value });
+ };
+
+ const handleSubmit = (e: { preventDefault: () => void; }) => {
+   e.preventDefault();
+
+   emailjs.send('service_auk8k2n', 'template_b7y6vqr', formData, 'FRsC4LFLhLb6OXsH3')
+     .then((response) => {
+       console.log('Email successfully sent!', response.status, response.text);
+       toast.success('Email successfully sent!',
+        {
+         description: new Date().toLocaleString(),
+       }
+       )
+       setFormData({
+        firstname: '',
+        lastname: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+       // Puedes agregar un mensaje de éxito para el usuario aquí
+     }, (err) => {
+       console.error('Failed to send email. Error:', err);
+       toast.error(`Failed to send email. Error:', ${err}`)
+
+       // Manejo de errores
+     });
+ };
   return (
 <motion.section 
  initial={{ opacity: 0 }}
@@ -33,18 +76,45 @@ const info:any=[{
          <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row gap-[30px]" >
            <div className='xl:h-[54%] order-2 xl:order-none'>
-            <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' action="">
-             <h3 className='text-4xl text-accent'>Let´s work together</h3>
+           <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' onSubmit={handleSubmit}>
+           <h3 className='text-4xl text-accent'>Let´s work together</h3>
              <p className='text-white/60'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus repellendus nesciunt dolorum, officia tempora dicta quisquam suscipit placeat nisi aspernatur voluptatibus soluta, nobis nostrum ratione cumque ab vel modi.</p>
            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Input type='firstname' placeholder='First name'></Input>
-            <Input type='lastname' placeholder='Last name'></Input>
-            <Input type='email' placeholder='Email'></Input>
-            <Input type='phone' placeholder='Phone'></Input>
+           <Input 
+  name='firstname' 
+  type='text' 
+  placeholder='First name' 
+  value={formData.firstname} 
+  onChange={handleChange} // Asegúrate de que esto esté presente
+/>
+<Input 
+
+  name='lastname' 
+  type='text' 
+  placeholder='Last name' 
+  value={formData.lastname} 
+  onChange={handleChange} // Asegúrate de que esto esté presente
+/>
+<Input 
+required
+  name='email' 
+  type='email' 
+  placeholder='Email' 
+  value={formData.email} 
+  onChange={handleChange} // Asegúrate de que esto esté presente
+/>
+<Input 
+
+  name='phone' 
+  type='text' 
+  placeholder='Phone' 
+  value={formData.phone} 
+  onChange={handleChange} // Asegúrate de que esto esté presente
+/>
            </div>
-           <Select>
-            <SelectTrigger className='w-full'>
-             <SelectValue placeholder='Select a service'>
+           <Select required onValueChange={(value) => setFormData({ ...formData, service: value })}>
+           <SelectTrigger className='w-full'>
+             <SelectValue  placeholder='Select a service'>
               
              </SelectValue>
             </SelectTrigger>
@@ -71,11 +141,11 @@ const info:any=[{
             </SelectContent>
            </Select>
            <Textarea className='h-[200px]'
-           placeholder='Type ypur message here.'>
+           placeholder='Type ypur message here.' onChange={handleChange}>
             
            </Textarea>
-           <Button size='md' className='max-w-40 bg-zinc-950'>Send Message</Button>
-            </form>
+           <Button size='md' className='max-w-40 bg-zinc-950' type='submit'>Send Message</Button>
+           </form>
            </div>
            <div className="flex flex-1 items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className='flex flex-col gap-10'>
@@ -96,6 +166,7 @@ const info:any=[{
             </ul>
            </div>
           </div>
+          <Toaster closeButton />
 
          </div>
         </motion.section>  )
