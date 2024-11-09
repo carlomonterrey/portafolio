@@ -23,7 +23,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2 years",
+      fieldValue: "6 years",
       icon: <FaBriefcase />
     },
     {
@@ -77,7 +77,7 @@ const education = {
     {
       institution: "University of Pinar del Río, Cuba",
       degree: "Bachelor’s Degree in Computer Science",
-      duration: "4 years",
+      duration: "Sep 2019 - Dec 2023",
       description: "Acquired a comprehensive understanding of computer science principles, programming languages, and software development methodologies."
     },
     {
