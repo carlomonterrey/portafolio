@@ -23,9 +23,9 @@ const projects = [
   {
     num: '02',
     category: 'frontend',
-    title: 'Senfima Produckto',
+    title: 'Senfima Produkto',
     description: 'I led the development of a business management system from scratch, specifically designed to optimize operations for a warehouse and point of sale. This software enables efficient tracking of inventory and sales processes, facilitating the daily management of the business.',
-    stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }, { name: 'Primeng' }],
+    stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }, { name: 'Primeng' },{ name: 'NextJs' },{ name: 'MongoDB' }],
     imagen: '/assets/senfima.png',
     live: '',
     github: ''

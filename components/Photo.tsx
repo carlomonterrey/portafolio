@@ -19,13 +19,13 @@ animate={{opacity:1,
   animate={{opacity:1,
     transition:{delay:2.4,duration:0.4,ease:'easeInOut'}
   }}
-  className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  mix-blend-lighten absolute'>
+  className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  mix-blend-screen absolute'>
    <Image
        alt={''}
         priority
          quality={100}
-        fill className='object-container'
-         src={'/assets/photo.jpg'}/> 
+        fill className='object-cover rounded-full overflow-hidden '
+         src={'/assets/photo3.jpg'}/> 
 
   </motion.div>
 <motion.svg 
