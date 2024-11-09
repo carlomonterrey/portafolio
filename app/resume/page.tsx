@@ -1,93 +1,109 @@
 "use client"
    // services.js o services.jsx
    import React from 'react';
-import { FaHtml5,FaCss3,FaJs,FaAngular,FaReact,FaNode } from 'react-icons/fa';
-import { SiNextdotjs,SiTailwindcss} from 'react-icons/si';
+import { FaHtml5,FaCss3,FaJs,FaAngular,FaReact,FaNode, FaPython, FaUser, FaPhone, FaBriefcase, FaGlobe, FaLanguage } from 'react-icons/fa';
+import { SiDocker, SiMongodb, SiNextdotjs,SiPostgresql,SiSkype,SiTailwindcss} from 'react-icons/si';
 import {Tabs,TabsContent,TabsList,TabsTrigger} from "@/components/ui/tabs"
 import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from "@/components/ui/tooltip"
 import {motion} from "framer-motion"
 import { ScrollArea } from "@/components/ui/scroll-area";
-const about={
-  title:"About me ",
-  description:"",
-  info:[{
-    fieldName:"Name",
-    fieldValue:"Carlos Alfredo Pérez MOnterrey"
-  },{
-    fieldName:"Phone",
-    fieldValue:"+53 55230827"
-  },{
-    fieldName:"Experience",
-    fieldValue:"2 years"
-  },{
-    fieldName:"Skype",
-    fieldValue:"carlomonterrey"
-  },{
-    fieldName:"Nationality",
-    fieldValue:"Cuban"
-  },{
-    fieldName:"Freelancer",
-    fieldValue:"Available"
-  },{
-    fieldName:"Lenguages",
-    fieldValue:"Spanish,English"
-  },]
+const about = {
+  title: "About Me",
+  description: "I am a passionate Full Stack Developer with a strong foundation in both front-end and back-end technologies. I thrive in collaborative environments and am dedicated to creating efficient and user-friendly applications.",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Carlos Alfredo Pérez Monterrey",
+      icon: <FaUser />
+    },
+    {
+      fieldName: "Phone",
+      fieldValue: "+53 55230827",
+      icon: <FaPhone />
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "2 years",
+      icon: <FaBriefcase />
+    },
+    {
+      fieldName: "Skype",
+      fieldValue: "carlomonterrey",
+      icon: <SiSkype />
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Cuban",
+      icon: <FaGlobe />
+    },
+    {
+      fieldName: "Freelancer",
+      fieldValue: "Available",
+      icon: <FaBriefcase />
+    },
+    {
+      fieldName: "Languages",
+      fieldValue: "Spanish, English",
+      icon: <FaLanguage />
+    },
+  ]
 }
-const experience={
-  icon:"",
-  title:"My experience",
-  description:"",
-  items: [{
-    company:"University of Pinar del Río,Cuba",
-    position:"Fullstack Developer",
-    duration:"Jan 2024 - Present"
-  },{
-    company:"MasUno S.R.L",
-    position:"Frontend Developer",
-    duration:"Jan 2024 - Oct 2024"
-  },]
+
+const experience = {
+  icon: "",
+  title: "My Experience",
+  description: "I have gained valuable experience working in various roles that have honed my skills in software development.",
+  items: [
+    {
+      company: "University of Pinar del Río, Cuba",
+      position: "Full Stack Developer",
+      duration: "Jan 2024 - Present",
+      description: "Developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality software solutions."
+    },
+    {
+      company: "MasUno S.R.L",
+      position: "Frontend Developer",
+      duration: "Jan 2024 - Oct 2024",
+      description: "Focused on creating responsive and visually appealing user interfaces, ensuring optimal user experience through effective design principles."
+    },
+  ]
 }
-const education={
-  icon:"",
-  title:"My education",
-  description:"",
-  items: [{
-    institution:"University of Pinar del Río,Cuba",
-    degree:"Bachelor’s Degree in Computer Science",
-    duration:"4 years"
-  },{
-    institution:"CRAI Department of the University of Pinar del Rio, Cuba",
-    degree:"FullStack Developer Internship",
-    duration:"Feb 2021-Dec 2023"
-  }]
-}
-const skills={
-  title:"My skills",
-  description:"A representation of my habilities",
-  skillLits:[
-    {icon:<FaHtml5/>,
-      name:"Html"
+
+const education = {
+  icon: "",
+  title: "My Education",
+  description: "I have a solid educational background in computer science, complemented by practical experience through internships.",
+  items: [
+    {
+      institution: "University of Pinar del Río, Cuba",
+      degree: "Bachelor’s Degree in Computer Science",
+      duration: "4 years",
+      description: "Acquired a comprehensive understanding of computer science principles, programming languages, and software development methodologies."
     },
-    {icon:<FaCss3/>,
-      name:"Css"
-    }, {icon:<FaJs/>,
-      name:"JavaScript"
-    },
-    {icon:<FaAngular/>,
-      name:"Angular"
-    },
-    {icon:<FaReact/>,
-      name:"React.js"
-    },
-    {icon:<SiNextdotjs/>,
-      name:"Next.js"
-    },
-    {icon:<SiTailwindcss/>,
-      name:"Tailwindcss"
+    {
+      institution: "CRAI Department of the University of Pinar del Río, Cuba",
+      degree: "Full Stack Developer Internship",
+      duration: "Feb 2021 - Dec 2023",
+      description: "Gained hands-on experience in full stack development, working on real-world projects and collaborating with industry professionals."
     }
-    , {icon:<FaNode/>,
-      name:"Node"
-    }
+  ]
+}
+const skills = {
+  title: "My skills",
+  description: "A representation of my abilities",
+  skillList: [
+    { icon: <FaHtml5 />, name: "HTML" },
+    { icon: <FaCss3 />, name: "CSS" },
+    { icon: <FaJs />, name: "JavaScript" },
+    { icon: <FaAngular />, name: "Angular" },
+    { icon: <FaReact />, name: "React.js" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+    { icon: <FaNode />, name: "Node.js" },
+    { icon: <FaPython />, name: "Django" }, // Añadido Django
+    { icon: <SiPostgresql />, name: "PostgreSQL" }, // Añadido PostgreSQL
+    { icon: <SiMongodb />, name: "MongoDB" }, // Añadido MongoDB
+    { icon: <SiDocker />, name: "Docker" } // Añadido Docker
   ]
 }
    const Resume = () => {
@@ -169,6 +185,7 @@ const skills={
               <TabsContent value='about'
               className='w-full text-center xl:text-left'>
               <div className='flex flex-col gap-[30px]'>
+
   <h3 className='text-4xl font-bold'>{about.title}</h3>
   <p className='max-white-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
 
@@ -176,6 +193,7 @@ const skills={
   {about.info.map((info:any,index)=>{
     return (
       <li className='flex items-center justify-center xl:justify-start gap-4' key={index}>
+        <span>{info.icon}</span>
         <span className='text-white/60'>{info.fieldName}</span>
         <span className='text-xl'>{info.fieldValue}</span>
 
@@ -193,7 +211,7 @@ const skills={
   <p className='max-white-[600px] text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
 </div>
 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4'>
-  {skills.skillLits.map((skill:any,index)=>{
+  {skills.skillList.map((skill:any,index)=>{
     return <li key={index}>
       <TooltipProvider delayDuration={100}>
       <Tooltip>

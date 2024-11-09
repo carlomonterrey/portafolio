@@ -3,7 +3,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // o 'swiper/css' dependiendo de la versión que estés usando
-
+import {WorkSliderBtns} from '@/components/WorkSliderBtns'
 import Image from 'next/image'
 
 // services.js o services.jsx
@@ -23,9 +23,9 @@ const projects = [
   {
     num: '02',
     category: 'frontend',
-    title: 'Senfima Produckto',
+    title: 'Senfima Produkto',
     description: 'I led the development of a business management system from scratch, specifically designed to optimize operations for a warehouse and point of sale. This software enables efficient tracking of inventory and sales processes, facilitating the daily management of the business.',
-    stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }, { name: 'Primeng' }],
+    stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }, { name: 'Primeng' },{ name: 'NextJs' },{ name: 'MongoDB' }],
     imagen: '/assets/senfima.png',
     live: '',
     github: ''
@@ -53,7 +53,7 @@ setProject(projects[currentIndex])  }
 
       <motion.section
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 1,transition:{delay:2.4,duration:0.4,ease:"easeIn"} }}
         className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
         <div className="container mx-auto">
           <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
@@ -62,7 +62,7 @@ setProject(projects[currentIndex])  }
                 <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}  </div>
                 <h2 className='text-[42px] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize'>{project.title} </h2>
                 <p className='text-white/60'>{project.description}</p>
-                <ul className='flex gap-4'>
+                <ul className='flex flex-wrap gap-4'>
                   {project.stack.map((item: any, index) => {
                     return (<li key={index} className='text-xl text-accent'>{item.name} </li>)
                   })}
@@ -120,7 +120,8 @@ setProject(projects[currentIndex])  }
 
                   )
                 })}
-
+<WorkSliderBtns containerStyle={'flex  gap-2 absolute right-0 bottom-[cal(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none'}
+ btnStyle={'bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all'} iconsStyle={''}></WorkSliderBtns>
               </Swiper>     
                </div>
           </div>
