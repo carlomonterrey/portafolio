@@ -14,9 +14,9 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'Sceiba',
-    description: '',
+    description: 'I successfully migrated a system from Angular version 8 to version 17, with a strong emphasis on reducing production bundle sizes and enhancing loading times. This migration involved replacing outdated libraries that were incompatible with Angular 17 with modern, up-to-date alternatives.Conducted comprehensive quality assurance tests that enabled me to identify and rectify software errors, significantly improving overall quality and optimizing performance.Enhanced search functionalities and interoperability between various systems at the University of Pinar del Río by developing a property graph, facilitating better data management and retrieval.',
     stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }],
-    imagen: '/assets/photo3.jpg',
+    imagen: '/assets/sceiba.png',
     live: '',
     github: ''
   },
@@ -24,19 +24,20 @@ const projects = [
     num: '02',
     category: 'frontend',
     title: 'Senfima Produckto',
-    description: '',
+    description: 'I led the development of a business management system from scratch, specifically designed to optimize operations for a warehouse and point of sale. This software enables efficient tracking of inventory and sales processes, facilitating the daily management of the business.',
     stack: [{ name: 'Html 5' }, { name: 'Css' }, { name: 'Typescript' }, { name: 'Angular' }, { name: 'Angular Material' }, { name: 'Primeng' }],
-    imagen: '/assets/photo3.jpg',
+    imagen: '/assets/senfima.png',
     live: '',
     github: ''
   },
   {
+    
     num: '03',
     category: 'backend',
-    title: 'RDF Graph',
-    description: '',
+    title: 'RDF Graph for Sceiba',
+    description: 'I developed a comprehensive RDF knowledge graph using data from Sceiba, which significantly enhanced interoperability and facilitated more semantic information retrieval. This graph not only streamlined data access but also enabled the integration of advanced artificial intelligence tasks, allowing for more intelligent data processing and analysis.By leveraging the semantic capabilities of the RDF model, users can now perform complex queries and gain deeper insights from the data, fostering a more intuitive and efficient approach to information discovery. ',
     stack: [{ name: 'python' }, { name: 'Flask' }, { name: 'RDF lib' }, { name: 'Elasticsearch' }],
-    imagen: '',
+    imagen: '/assets/graph.png',
     live: '',
     github: ''
   }
@@ -58,29 +59,33 @@ setProject(projects[currentIndex])  }
           <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
             <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
               <div className='flex flex-col gap-[30px] h-[50%]'>
-                <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
-                <h2 className='text-[42px] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize'>{project.category} project</h2>
+                <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}  </div>
+                <h2 className='text-[42px] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize'>{project.title} </h2>
                 <p className='text-white/60'>{project.description}</p>
                 <ul className='flex gap-4'>
                   {project.stack.map((item: any, index) => {
-                    return (<li key={index} className='text-xl text-accent'>{item.name}</li>)
+                    return (<li key={index} className='text-xl text-accent'>{item.name} </li>)
                   })}
                 </ul>
                 <div className='border border-white/20'></div>
                 <div className='flex items-center gap-4'>
-                  <a href={project.live}>
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                          <BsArrowUpRight className='text-white text-3xl hover:text-accent'></BsArrowUpRight>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>Live project</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </a>
+                 {project.live!=''&&(
+                   <a href={project.live}>
+                   <TooltipProvider delayDuration={100}>
+                     <Tooltip>
+                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                         <BsArrowUpRight className='text-white text-3xl hover:text-accent'></BsArrowUpRight>
+                       </TooltipTrigger>
+                       <TooltipContent>
+                         <p>Live project</p>
+                       </TooltipContent>
+                     </Tooltip>
+                   </TooltipProvider>
+                 </a>
 
+                 )
+
+                 }
                   <a href={project.github}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
