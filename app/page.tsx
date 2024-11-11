@@ -7,12 +7,20 @@ import { Button } from "@/components/ui/button";
 import { IoMdDownload } from "react-icons/io"
 
  export default function Home() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/cv/CV_CarlosMonterrey.pdf'; 
+    link.download = 'carlomonterreycv.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className=" h-full">
       <div className="container mx-auto h-full">
       <div className="flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
         <div className="text-center xl:text-left order-2 xl:order-none">
-          <span className="text-xl">Softwere Developer</span>
+          <span className="text-xl">Software Developer</span>
           <h1 className="h1 mb-6 "><span className="text-6xl">Hello I am</span>
            <br /><span className="text-accent text-6xl">Carlos Monterrey</span>
           </h1>
@@ -27,7 +35,9 @@ constantly learn and optimize both my work and the user experiences I help creat
           variant="outline"
           size="lg"
           className="uppercase flex items-center gap-2 bg-primary border-accent text-accent  hover:bg-accent
-          hover:text-primary">
+          hover:text-primary"
+          onClick={handleDownload}
+>
             <span>Download CV</span>
             <IoMdDownload className='text-xl'/>
           </Button>

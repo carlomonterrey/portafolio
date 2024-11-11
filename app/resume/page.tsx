@@ -77,7 +77,7 @@ const education = {
     {
       institution: "University of Pinar del Río, Cuba",
       degree: "Bachelor’s Degree in Computer Science",
-      duration: "4 years",
+      duration: "Sep 2019 - Dec 2023",
       description: "Acquired a comprehensive understanding of computer science principles, programming languages, and software development methodologies."
     },
     {
@@ -90,7 +90,7 @@ const education = {
 }
 const skills = {
   title: "My skills",
-  description: "A representation of my abilities",
+  description: "",
   skillList: [
     { icon: <FaHtml5 />, name: "HTML" },
     { icon: <FaCss3 />, name: "CSS" },
@@ -100,10 +100,10 @@ const skills = {
     { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiTailwindcss />, name: "Tailwind CSS" },
     { icon: <FaNode />, name: "Node.js" },
-    { icon: <FaPython />, name: "Django" }, // Añadido Django
-    { icon: <SiPostgresql />, name: "PostgreSQL" }, // Añadido PostgreSQL
-    { icon: <SiMongodb />, name: "MongoDB" }, // Añadido MongoDB
-    { icon: <SiDocker />, name: "Docker" } // Añadido Docker
+    { icon: <FaPython />, name: "Django" }, 
+    { icon: <SiPostgresql />, name: "PostgreSQL" }, 
+    { icon: <SiMongodb />, name: "MongoDB" }, 
+    { icon: <SiDocker />, name: "Docker" }
   ]
 }
    const Resume = () => {

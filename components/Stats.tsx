@@ -11,12 +11,12 @@ const stats=[
   text:'Technologies mastered'
  },
  {
-  num:3,
+  num:4,
   text:'Projects'
  },
  {
   num:1120,
-  text:'Code commits in the las year'
+  text:'Code commits in the last year'
  }
 ]
 export const Stats = () => {
