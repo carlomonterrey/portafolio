@@ -3,7 +3,7 @@ import React from 'react'
 import CountUp from 'react-countup'
 const stats=[
  {
-  num:6,
+  num:2,
   text:'Years of experience'
  },
  {
@@ -16,7 +16,7 @@ const stats=[
  },
  {
   num:1120,
-  text:'Code commits in the las year'
+  text:'Code commits in the last year'
  }
 ]
 export const Stats = () => {

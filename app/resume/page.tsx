@@ -23,7 +23,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "6 years",
+      fieldValue: "2 years",
       icon: <FaBriefcase />
     },
     {
@@ -90,7 +90,7 @@ const education = {
 }
 const skills = {
   title: "My skills",
-  description: "A representation of my abilities",
+  description: "",
   skillList: [
     { icon: <FaHtml5 />, name: "HTML" },
     { icon: <FaCss3 />, name: "CSS" },
@@ -100,10 +100,10 @@ const skills = {
     { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiTailwindcss />, name: "Tailwind CSS" },
     { icon: <FaNode />, name: "Node.js" },
-    { icon: <FaPython />, name: "Django" }, // Añadido Django
-    { icon: <SiPostgresql />, name: "PostgreSQL" }, // Añadido PostgreSQL
-    { icon: <SiMongodb />, name: "MongoDB" }, // Añadido MongoDB
-    { icon: <SiDocker />, name: "Docker" } // Añadido Docker
+    { icon: <FaPython />, name: "Django" }, 
+    { icon: <SiPostgresql />, name: "PostgreSQL" }, 
+    { icon: <SiMongodb />, name: "MongoDB" }, 
+    { icon: <SiDocker />, name: "Docker" }
   ]
 }
    const Resume = () => {

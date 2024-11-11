@@ -2,7 +2,7 @@ import { Link } from 'lucide-react';
 import React from 'react'
 import {FaGithub,FaLinkedinIn} from "react-icons/fa"
 const socials=[
- {icon:<FaGithub />,path:""},
+ {icon:<FaGithub />,path:"https://github.com/carlomonterrey/"},
  {icon:<FaLinkedinIn />,path:""}
 
 ]
