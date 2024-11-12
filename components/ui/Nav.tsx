@@ -2,36 +2,23 @@
 import Link  from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 
 
-const links=[{
- name:'home',
- path:'/'
+const links = [
+  { name: 'HOME', path: '/' },
+  { name: 'SERVICES', path: '/services' },
+  { name: 'RESUME', path: '/resume' },
+  { name: 'WORK', path: '/work' },
+  { name: 'CONTACT', path: '/contact' }
+];
 
-},
-{
- name:'services',
- path:'/services'
-
-},
-{
- name:'resume',
- path:'/resume'
-
-},
-{
- name:'work',
- path:'/work'
-
-},{
-  name:'contact',
-  path:'/contact'
- 
- }]
 
 
 export const Nav = () => {
+  const { t } = useTranslation();
+
 const pathname=usePathname()
 console.log(pathname);
 
@@ -41,7 +28,7 @@ console.log(pathname);
   return(
    <Link href={link.path} key={index} className={`${link.path===pathname&&"text-accent border-b-2 border-accent"} 
    capitalize font-medium hover:text-accent transition-all`}>
-    {link.name}</Link>
+      {t(link.name)}</Link>
   )
  })
 }</nav>  )
