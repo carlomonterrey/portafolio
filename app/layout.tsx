@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/ui/Header";
 import { usePathname } from "next/navigation";
 import { PageTransition } from "@/components/ui/PageTransition";
+import { ChangeLenguaje } from "@/components/ChangeLenguaje";
 
 
 export default function RootLayout({
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body >
        <Header/>
+       
          <PageTransition>
          {children}
          </PageTransition>

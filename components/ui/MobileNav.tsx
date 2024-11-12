@@ -4,16 +4,20 @@ import React, { useState } from 'react';
 import { CiMenuFries } from 'react-icons/ci';
 import { SheetTrigger, SheetContent, Sheet } from './sheet';
 import Link from 'next/link';
+import { ChangeLenguaje } from '../ChangeLenguaje';
+import { useTranslation } from 'react-i18next';
 
 const links = [
-  { name: 'home', path: '/' },
-  { name: 'services', path: '/services' },
-  { name: 'resume', path: '/resume' },
-  { name: 'work', path: '/work' },
-  { name: 'contact', path: '/contact' }
+  { name: 'HOME', path: '/' },
+  { name: 'SERVICES', path: '/services' },
+  { name: 'RESUME', path: '/resume' },
+  { name: 'WORK', path: '/work' },
+  { name: 'CONTACT', path: '/contact' }
 ];
 
 export const MobileNav = () => {
+  const { t } = useTranslation();
+
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false); 
 
@@ -22,12 +26,17 @@ export const MobileNav = () => {
   };
 
   return (
+    <>
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className='flex justify-center items-center' onClick={() => setIsOpen(true)}>
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
+        <div className='mt-32'>       <ChangeLenguaje ></ChangeLenguaje>
+        </div>
+
         <div className='mt-32 mb-40 text-center text-2xl'></div>
+
         <nav className='flex flex-col justify-center items-center gap-8'>
           {links.map(link => (
             <Link  
@@ -36,11 +45,12 @@ export const MobileNav = () => {
               href={link.path}
               onClick={handleLinkClick} 
             >
-              {link.name}
+             {t(link.name)}
             </Link>
           ))}
         </nav>
       </SheetContent>
     </Sheet>
+    </>
   );
 };
