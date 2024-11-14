@@ -40,7 +40,7 @@ i18n
           EMAIL_ERROR: "Failed to send email. Error:",
           ABOUT_ME: "About Me",
           ABOUT_DESCRIPTION: "I am a passionate Full Stack Developer with a strong foundation in both front-end and back-end technologies. I thrive in collaborative environments and am dedicated to creating efficient and user-friendly applications.",
-          NAME: "Name",
+          NAME: "Carlos Monterrey",
           PHONE: "Phone",
           EXPERIENCE: "Experience",
           SKYPE: "Skype",
