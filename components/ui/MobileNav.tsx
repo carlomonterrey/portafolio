@@ -32,12 +32,13 @@ export const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
-        <div className='mt-32'>       <ChangeLenguaje ></ChangeLenguaje>
+        <div className='mt-12'>    
+             <ChangeLenguaje ></ChangeLenguaje>
         </div>
 
-        <div className='mt-32 mb-40 text-center text-2xl'></div>
+        <div className='mt-32 mb-32 text-center text-2xl'></div>
 
-        <nav className='flex flex-col justify-center items-center gap-8'>
+        <nav className='flex flex-col justify-center items-center gap-4'>
           {links.map(link => (
             <Link  
               key={link.name} 
