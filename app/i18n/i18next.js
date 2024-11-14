@@ -86,7 +86,7 @@ i18n
           YEARS_OF_EXPERIENCE: "Years of experience",
           TECHNOLOGIES_MASTERED: "Technologies mastered",
           PROJECTS: "Projects",
-          CODE_COMMITS: "Code commits in the last year",
+          CODE_COMMITS: "Code commits",
           
 
         },
@@ -169,7 +169,7 @@ i18n
           YEARS_OF_EXPERIENCE: "Años de experiencia",
           TECHNOLOGIES_MASTERED: "Tecnologías dominadas",
           PROJECTS: "Proyectos",
-          CODE_COMMITS: "Commits de código en el último año",
+          CODE_COMMITS: "Commits de código",
 
         },
       },
