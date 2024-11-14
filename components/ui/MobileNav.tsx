@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { CiMenuFries } from 'react-icons/ci';
-import { SheetTrigger, SheetContent, Sheet } from './sheet';
+import { SheetTrigger, SheetContent, Sheet, SheetTitle, SheetDescription } from './sheet';
 import Link from 'next/link';
 import { ChangeLenguaje } from '../ChangeLenguaje';
 import { useTranslation } from 'react-i18next';
@@ -32,6 +32,9 @@ export const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
+      <SheetTitle></SheetTitle> 
+      <SheetDescription></SheetDescription>
+
         <div className='mt-12'>    
              <ChangeLenguaje ></ChangeLenguaje>
         </div>
